@@ -16,13 +16,12 @@ function newGame() {
     var incorrectLetters = [];
     // a word is picked at random from the array
     var playWord = playableWords[Math.floor(Math.random() * playableWords.length)];
-    console.log(playWord)
     // a series of -'s are presented that correspond to the amount of letters in the randomly selected word
     var playWordArray = playWord.split("");
     var blankArray = [];
 
     for(i = 0; i < playWordArray.length; i++){
-        blankArray.push("-")
+        blankArray.push(" _ ")
     }
 
     var blanksBox = document.getElementById("letter-blanks")
@@ -59,7 +58,7 @@ function newGame() {
             blanksBox.innerHTML = "";
             activeDisplay();
         }
-
+        // if guess is incorrect, guessed letter goes to incorrect letter array and guesses goes down by 1
         else{
             var missedLetters = document.createElement("span");
             missedLetters.textContent = letterGuess + " ";
@@ -68,14 +67,15 @@ function newGame() {
             remainingGuess.textContent = guesses;
             incorrectLetters.push(letterGuess);
         }
+        // if all guesses reaches 0, player loses and losses goes up by 1, game restarts
         if(guesses < 1){
             alert("Sorry :( You failed to guess the mystery word: " + playWord)
             incorrectGuesses.innerHTML = "";
             blanksBox.innerHTML = "";
             newGame();
         }
-
-        if(blankArray.includes("-")){
+        // if all blanks are filled, player wins and wins goes up by 1, game restarts
+        if(blankArray.includes(" _ ")){
             return
         }
         else{
@@ -87,15 +87,6 @@ function newGame() {
     }
 }
 newGame();
-
-
-
-
-// if guess is incorrect, guessed letter goes to incorrect letter array and guesses goes down by 1
-// if all blanks are filled, player wins and wins goes up by 1, game restarts
-// if all guesses reaches 0, player loses and losses goes up by 1, game restarts
-
-// newGame()
 
 // var winCount = document.getElementById("win-count");
 // winCount.textContent = wins;
