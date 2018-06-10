@@ -5,7 +5,7 @@ var losses = 0;
 // possible leters to type array is defined
 var possibleChoices = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 // an array of words is defined
-var playableWords = ["PUPPY" , "KITTEN" , "MONKEY" , "OCTOPUS" , "ELEPHANT"];
+var playableWords = ["LION" , "TIGER" , "MONKEY" , "GIRAFFE" , "ELEPHANT" , "ANTELOPE" , "FROG" , "BEAR" , "ZEBRA" , "GAZELLE" , "SNAKE", "RHINOCEROS" , "CROCODILE" , "LEOPARD" , "PANTHER" , "PARROT" , "PIRANHA"];
 
 function newGame() {
     // guesses are set to 10

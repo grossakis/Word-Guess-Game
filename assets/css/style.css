@@ -1,7 +1,26 @@
 body{
-    background-color: #532a2a;
-    color: #ff9999;
-    padding: 25px;
+    background-image: url("../images/tree_bark.png");
+    color: #000000;
+    text-align: center;
+}
+.main-box{
+    background-color: #ffffff;
+    opacity: 0.5;
+    width: 60%;
+    margin: auto;
+    padding: 50px;
+    border: 2px solid #a5a5a5;
+    box-shadow: 0 0 20px #a7a7a7;
+}
+header{
+    color: #505050;
+    background-color: #ffffff;
+    opacity: 0.75;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 40px;
+    border-bottom: 2px solid #a5a5a5;
+    box-shadow: 0 0 20px #a7a7a7;
 }
 h1{
     font-size: 36px;
