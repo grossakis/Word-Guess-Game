@@ -35,7 +35,7 @@ function newGame() {
     }
     activeDisplay();
     // player types letters to guess which letters fill blanks
-    document.onkeyup = function () {
+    document.onkeyup = function (event) {
         var letterGuess = String.fromCharCode(event.keyCode).toUpperCase();
         // if player input is not a letter, player is notified to please pick a letter
         if(possibleChoices.includes(letterGuess)){}
